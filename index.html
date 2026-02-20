@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BRIXONATOR e.U. – Dein Spezialist für LEGO® Teile, Minifiguren & Zubehör. Schneller Versand aus Österreich.">
+
+<title>BRIXONATOR e.U. | LEGO® Teile & Minifiguren</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #ff6f00;
+    --primary-dark: #e65100;
+    --secondary: #ffcc00;
+    --bg-light: #f8f9fa;
+    --bg-accent: #fff3e0;
+    --bg-white: #ffffff;
+    --text-dark: #333;
+    --text-light: #ffffff;
+}
+
+/* DARK MODE */
+body.dark-mode {
+    --bg-light: #121212;
+    --bg-accent: #1e1e1e;
+    --bg-white: #1a1a1a;
+    --text-dark: #f1f1f1;
+}
+
+/* RESET */
+* {
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, var(--secondary), var(--primary));
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 120px;
+    width: auto;
+    transition: height 0.3s;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 70px;
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+.theme-toggle {
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    transition: 0.3s;
+}
+
+.theme-toggle:hover {
+    background: rgba(255,255,255,0.35);
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: var(--bg-white);
+    background-image: radial-gradient(circle, rgba(0,0,0,0.03) 2px, transparent 2px);
+    background-size: 20px 20px;
+    transition: background 0.3s;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+/* BUTTONS */
+.button {
+    display: inline-block;
+    padding: 14px 32px;
+    margin: 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Noppen-Effekt */
+.button::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    box-shadow:
+        20px 0 rgba(255,255,255,0.25),
+        40px 0 rgba(255,255,255,0.25),
+        0 20px rgba(255,255,255,0.25),
+        20px 20px rgba(255,255,255,0.25),
+        40px 20px rgba(255,255,255,0.25);
+    pointer-events: none;
+}
+
+.primary {
+    background: #ff5500;
+    color: white;
+    box-shadow: 0 5px 0 #cc4400, 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 0 #cc4400, 0 14px 20px rgba(0,0,0,0.2);
+}
+
+.secondary {
+    background: #cc0000;
+    color: white;
+    box-shadow: 0 5px 0 #990000, 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.secondary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 0 #990000, 0 14px 20px rgba(0,0,0,0.2);
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 80px 20px;
+    background: var(--bg-accent);
+    transition: background 0.3s;
+}
+
+.feature-box {
+    background: var(--bg-white);
+    padding: 35px 25px;
+    margin: 15px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.feature-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.2);
+}
+
+/* REVIEWS */
+.reviews {
+    padding: 80px 20px;
+    text-align: center;
+    background: var(--bg-white);
+    transition: background 0.3s;
+}
+
+.review-box {
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 30px;
+    border-radius: 18px;
+    background: var(--bg-accent);
+    transition: background 0.3s;
+}
+
+.stars {
+    color: #ffb400;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.jpg" alt="BRIXONATOR Logo">
+    </div>
+
+    <nav>
+        <a href="https://www.bricklink.com/feedback.asp?u=BRIXONATOR"
+           target="_blank"
+           rel="noopener noreferrer">
+           Bewertungen ↗
+        </a>
+
+        <a href="https://store.bricklink.com/BRIXONATOR?p=BRIXONATOR#/shop"
+           target="_blank"
+           rel="noopener noreferrer">
+           Zum BrickLink Store ↗
+        </a>
+
+        <a href="mailto:brixonator@gmx.at">
+           ✉️ Kontakt
+        </a>
+
+        <button id="theme-toggle" class="theme-toggle" aria-label="Dark Mode umschalten">
+           🌙
+        </button>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <h1>BRIXONATOR e.U.</h1>
+
+    <p>
+        Dein Spezialist für LEGO® Teile, Minifiguren & Zubehör.<br>
+        💰 Ankauf von LEGO® Konvoluten und Minifiguren<br>
+        📍 Linz, Österreich – Schneller Versand & Top Bewertungen
+    </p>
+
+    <a href="https://store.bricklink.com/BRIXONATOR?p=BRIXONATOR#/shop"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="button primary">
+       🛒 Jetzt auf BrickLink shoppen
+    </a>
+
+    <a href="https://www.bricklink.com/feedback.asp?u=BRIXONATOR"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="button secondary">
+       ⭐ Kundenbewertungen ansehen
+    </a>
+</section>
+
+<section class="features" id="angebote">
+    <div class="feature-box">
+        <h3>🧱 Große Teileauswahl</h3>
+        <p>Tausende LEGO® Einzelteile in vielen Farben und Varianten – inklusive seltener Teile.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>👤 Seltene Minifiguren</h3>
+        <p>Beliebte Charaktere & spezielle Sammlerstücke.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>🚚 Schneller Versand</h3>
+        <p>Versand aus Österreich – sicher, schnell & zuverlässig.</p>
+    </div>
+</section>
+
+<section class="reviews" id="bewertungen">
+    <h2>Was unsere Kunden sagen</h2>
+
+    <div class="review-box">
+        <div class="stars">★★★★★</div>
+        <p>"Super schneller Versand und perfekte Teilequalität. Gerne wieder!"</p>
+    </div>
+
+    <div class="review-box">
+        <div class="stars">★★★★★</div>
+        <p>"Sehr gut verpackt, alles wie beschrieben. Top BrickLink Store."</p>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 BRIXONATOR e.U. | Linz, Österreich</p>
+    <p>Kontakt: brixonator@gmx.at</p>
+    <p>Hinweis: LEGO® ist eine Marke der LEGO Gruppe, die diese Website weder sponsert noch unterstützt.</p>
+</footer>
+
+<script>
+const toggleButton = document.getElementById("theme-toggle");
+const body = document.body;
+
+// Dark Mode aus localStorage laden
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+    toggleButton.textContent = "☀️";
+}
+
+toggleButton.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        toggleButton.textContent = "☀️";
+    } else {
+        localStorage.setItem("theme", "light");
+        toggleButton.textContent = "🌙";
+    }
+});
+</script>
+
+</body>
+</html>
