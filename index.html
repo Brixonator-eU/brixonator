@@ -158,25 +158,28 @@ nav a:hover {
 }
 
 .primary {
-    background: #ff5500;
+    background: linear-gradient(135deg, #ff6f00, #ff3d00);
     color: white;
-    box-shadow: 0 5px 0 #cc4400, 0 10px 15px rgba(0,0,0,0.2);
+    font-size: 20px;
+    padding: 16px 36px;
+    box-shadow: 0 6px 0 #cc4400, 0 12px 20px rgba(0,0,0,0.25);
+    transform: scale(1.05);
 }
 
 .primary:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 0 #cc4400, 0 14px 20px rgba(0,0,0,0.2);
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 10px 0 #cc4400, 0 18px 25px rgba(0,0,0,0.3);
 }
 
 .secondary {
-    background: #cc0000;
-    color: white;
-    box-shadow: 0 5px 0 #990000, 0 10px 15px rgba(0,0,0,0.2);
+    background: #eeeeee;
+    color: #333;
+    box-shadow: none;
 }
 
 .secondary:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 0 #990000, 0 14px 20px rgba(0,0,0,0.2);
+    background: #dddddd;
+    transform: translateY(-2px);
 }
 
 /* FEATURES */
@@ -302,6 +305,8 @@ footer {
         📍 Linz, Österreich – Schneller Versand & Top Bewertungen
     </p>
 
+    <div class="cta-buttons">
+
     <a href="https://store.bricklink.com/BRIXONATOR?p=BRIXONATOR#/shop"
        target="_blank"
        rel="noopener noreferrer"
@@ -313,8 +318,10 @@ footer {
        target="_blank"
        rel="noopener noreferrer"
        class="button secondary">
-       ⭐ Kundenbewertungen ansehen
+       ⭐ Bewertungen ansehen
     </a>
+
+</div>
 
 </section>
 
