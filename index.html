@@ -46,7 +46,7 @@ body {
 
 /* HEADER */
 header {
-    background: linear-gradient(90deg, var(--secondary), var(--primary));
+    background: white;
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
@@ -54,33 +54,27 @@ header {
 }
 
 .logo img {
-    height: 120px;
+    height: 240px;
     width: auto;
-    transition: height 0.3s;
+    object-fit: contain;
 }
 
 @media (max-width: 768px) {
     .logo img {
-        height: 70px;
+        height: 140px;
     }
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 15px;
 }
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: #333; /* dunkel statt weiß */
     font-weight: 500;
     font-size: 18px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .theme-toggle {
@@ -89,13 +83,12 @@ nav a:hover {
     border: none;
     cursor: pointer;
     font-size: 18px;
-    background: rgba(255,255,255,0.2);
-    color: white;
-    transition: 0.3s;
+    background: #eee;
+    color: #333;
 }
 
 .theme-toggle:hover {
-    background: rgba(255,255,255,0.35);
+    background: #ddd;
 }
 
 /* HERO */
